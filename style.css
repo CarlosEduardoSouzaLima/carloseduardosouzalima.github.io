@@ -69,7 +69,7 @@ main {
   padding: 20px;
 }
 
-/* CARD */
+/* CARD NORMAL */
 .card {
   background: white;
   border-radius: 18px;
@@ -79,8 +79,37 @@ main {
   animation: fadeUp 0.6s ease;
 }
 
+/* CARD COM FUNDO DE IMAGEM */
+.card-background {
+  position: relative;
+  border-radius: 18px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.6s ease;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card-background-content {
+  position: relative;
+  padding: 22px;
+}
+
 /* TITULO DOS CARDS */
-.card h2 {
+.card h2,
+.card-background h2 {
   font-size: 1.4rem;
   font-weight: 600;
   color: #e60026; /* vermelho vivo */
@@ -91,10 +120,11 @@ main {
 }
 
 /* TEXTO */
-.card p {
+.card p,
+.card-background p {
   font-size: 15px;
   line-height: 1.6;
-  color: #555;
+  color: #fff; /* branco para contraste sobre imagem */
 }
 
 /* CONTADORES */
@@ -104,6 +134,7 @@ main {
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* GALERIAS */
@@ -224,7 +255,8 @@ main {
     padding: 15px;
   }
 
-  .card {
+  .card,
+  .card-background-content {
     padding: 18px;
   }
 
@@ -239,31 +271,4 @@ main {
     font-size: 14px;
     padding: 7px 10px;
   }
-}
-/* CARD COM FUNDO DE IMAGEM */
-.card-background {
-  position: relative;
-  border-radius: 18px;
-  margin-bottom: 22px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  animation: fadeUp 0.6s ease;
-  color: white;
-  background-size: cover;
-  background-position: center;
-}
-
-.card-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.card-background-content {
-  position: relative;
-  padding: 22px;
 }

@@ -20,51 +20,80 @@
 
     <main>
       <!-- SOBRE -->
-      <section id="sobre" class="card">
-        <h2>❤️ Nossa História</h2>
-        <p>
-          Nossa história é feita de momentos simples que se tornaram
-          inesquecíveis. Cada sorriso, cada desafio e cada conquista nos
-          trouxeram até aqui, fortalecendo nosso amor dia após dia. Este espaço
-          é para guardar nossas memórias, relembrar o quanto caminhamos juntos e
-          celebrar tudo o que ainda vamos viver — ao lado um do outro e do nosso
-          doguinho 🐶✨
-        </p>
+      <section
+        id="sobre"
+        class="card-background"
+        style="background-image: url('fotos/01.jpg')"
+      >
+        <div class="card-background-content">
+          <h2>❤️ Nossa História</h2>
+          <p>
+            Nossa história é feita de momentos simples que se tornaram
+            inesquecíveis. Cada sorriso, cada desafio e cada conquista nos
+            trouxeram até aqui, fortalecendo nosso amor dia após dia. Este
+            espaço é para guardar nossas memórias, relembrar o quanto caminhamos
+            juntos e celebrar tudo o que ainda vamos viver — ao lado um do outro
+            e do nosso doguinho 🐶✨
+          </p>
+        </div>
       </section>
 
       <!-- TEMPO -->
-      <section id="tempo" class="card">
-        <h2>⏳ Tempo juntos</h2>
-        <p id="contador-casados"></p>
+      <section
+        id="tempo"
+        class="card-background"
+        style="background-image: url('fotos/02.jpeg')"
+      >
+        <div class="card-background-content">
+          <h2>⏳ Tempo juntos</h2>
+          <p id="contador-casados"></p>
+        </div>
       </section>
 
       <!-- GALERIA PRINCIPAL -->
-      <section id="galeria" class="card">
-        <h2>📸 Galeria</h2>
-        <div class="galeria">
-          <img src="fotos/01.jpg" alt="Foto 1" />
-          <img src="fotos/02.jpeg" alt="Foto 2" />
-          <img src="fotos/03.jpeg" alt="Foto 3" />
+      <section
+        id="galeria"
+        class="card-background"
+        style="background-image: url('fotos/03.jpeg')"
+      >
+        <div class="card-background-content">
+          <h2>📸 Galeria</h2>
+          <div class="galeria">
+            <img src="fotos/01.jpg" alt="Foto 1" />
+            <img src="fotos/02.jpeg" alt="Foto 2" />
+            <img src="fotos/03.jpeg" alt="Foto 3" />
+          </div>
+          <a href="todas-fotos.html" class="ver-todas">Ver todas as fotos 📷</a>
         </div>
-        <a href="todas-fotos.html" class="ver-todas">Ver todas as fotos 📷</a>
       </section>
 
       <!-- DOGUINHO -->
-      <section id="dog" class="card">
-        <h2>🐶 Nosso Doguinho</h2>
-        <p id="contador-dog"></p>
-        <div class="galeria-dog">
-          <img src="fotos/d01.jpeg" alt="Doguinho 1" />
-          <img src="fotos/d02.jpeg" alt="Doguinho 2" />
-          <img src="fotos/d03.jpeg" alt="Doguinho 3" />
-          <img src="fotos/d04.jpeg" alt="Doguinho 4" />
-          <img src="fotos/d05.jpeg" alt="Doguinho 5" />
+      <section
+        id="dog"
+        class="card-background"
+        style="background-image: url('fotos/d01.jpeg')"
+      >
+        <div class="card-background-content">
+          <h2>🐶 Nosso Doguinho</h2>
+          <p id="contador-dog"></p>
+          <div class="galeria-dog">
+            <img src="fotos/d01.jpeg" alt="Doguinho 1" />
+            <img src="fotos/d02.jpeg" alt="Doguinho 2" />
+            <img src="fotos/d03.jpeg" alt="Doguinho 3" />
+            <img src="fotos/d04.jpeg" alt="Doguinho 4" />
+            <img src="fotos/d05.jpeg" alt="Doguinho 5" />
+          </div>
+          <a href="todas-fotos-doguinho.html" class="ver-todas">
+            Ver todas as fotos do Doguinho 🐶
+          </a>
         </div>
-        <a href="todas-fotos-doguinho.html" class="ver-todas">
-          Ver todas as fotos do Doguinho 🐶
-        </a>
       </section>
     </main>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <img id="lightbox-img" src="" alt="Foto ampliada" />
+    </div>
 
     <script src="script.js"></script>
   </body>

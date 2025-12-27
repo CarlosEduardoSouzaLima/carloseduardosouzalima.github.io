@@ -19,7 +19,7 @@ body {
   top: 0;
   width: 100%;
   height: 70px;
-  background: rgba(139, 0, 0, 0.75);
+  background: rgba(230, 0, 38, 0.85); /* vermelho vivo */
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
@@ -83,7 +83,7 @@ main {
 .card h2 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #8b0000;
+  color: #e60026; /* vermelho vivo */
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -103,52 +103,12 @@ main {
   margin-top: 10px;
   font-size: 16px;
   font-weight: 500;
-  color: #333;
+  color: #ffffff;
 }
 
-/* GALERIA PRINCIPAL */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 14px;
-  margin-top: 10px;
-}
-
-.galeria img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 14px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* GALERIA DO DOGUINHO */
-.galeria-dog {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 14px;
-  margin-top: 10px;
-}
-
-.galeria-dog img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 14px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.galeria-dog img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* GALERIA COMPLETA (Todas as Fotos) */
+/* GALERIAS */
+.galeria,
+.galeria-dog,
 .galeria-completa {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -156,6 +116,8 @@ main {
   margin-top: 10px;
 }
 
+.galeria img,
+.galeria-dog img,
 .galeria-completa img {
   width: 100%;
   height: 160px;
@@ -164,25 +126,50 @@ main {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.galeria img:hover,
+.galeria-dog img:hover,
 .galeria-completa img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* BOTÃO VER TODAS */
-.ver-todas {
+/* BOTÃO VER TODAS / VOLTAR */
+.ver-todas,
+.botao-voltar {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 12px;
-  background-color: #8b0000;
+  background-color: #e60026; /* vermelho vivo */
   color: white;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
+  transition: background-color 0.3s;
 }
 
-.ver-todas:hover {
-  background-color: #a00000;
+.ver-todas:hover,
+.botao-voltar:hover {
+  background-color: #ff3366;
+}
+
+/* LIGHTBOX */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
 }
 
 /* ANIMAÇÃO */
@@ -211,7 +198,7 @@ main {
     position: absolute;
     top: 70px;
     right: 15px;
-    background: rgba(139, 0, 0, 0.95);
+    background: rgba(230, 0, 38, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 15px;
@@ -247,8 +234,36 @@ main {
     height: 140px;
   }
 
-  .ver-todas {
+  .ver-todas,
+  .botao-voltar {
     font-size: 14px;
     padding: 7px 10px;
   }
+}
+/* CARD COM FUNDO DE IMAGEM */
+.card-background {
+  position: relative;
+  border-radius: 18px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.6s ease;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card-background-content {
+  position: relative;
+  padding: 22px;
 }

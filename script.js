@@ -112,7 +112,7 @@ function adicionarImagensAutomaticas() {
   // Página do doguinho
   if (pagina.includes("todas-fotos-doguinho")) {
     prefixo = "d";
-    quantidade = 24; // 🔴 AJUSTE se tiver mais ou menos
+    quantidade = 25; // 🔴 AJUSTE se tiver mais ou menos
   }
 
   // Página do casal

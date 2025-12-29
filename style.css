@@ -124,7 +124,11 @@ main {
 .card-background p {
   font-size: 15px;
   line-height: 1.6;
-  color: #fff; /* branco para contraste sobre imagem */
+  color: #555;
+}
+
+.card-background p {
+  color: #fff; /* contraste sobre imagem */
 }
 
 /* CONTADORES */
@@ -155,6 +159,7 @@ main {
   object-fit: cover;
   border-radius: 14px;
   transition: transform 0.3s, box-shadow 0.3s;
+  cursor: zoom-in; /* indica que pode abrir em tela cheia */
 }
 
 .galeria img:hover,
@@ -164,7 +169,7 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* BOTÃO VER TODAS / VOLTAR */
+/* BOTÕES VER TODAS / VOLTAR */
 .ver-todas,
 .botao-voltar {
   display: inline-block;
@@ -201,6 +206,8 @@ main {
   max-width: 90%;
   max-height: 90%;
   border-radius: 12px;
+  transition: transform 0.3s ease; /* zoom suave */
+  cursor: zoom-in;
 }
 
 /* ANIMAÇÃO */
